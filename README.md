@@ -43,10 +43,10 @@ Just upload and image discribe in the prompt and just run
     text-align: center;
 }
 .compair__item img {
-    width: 100%;
+    width: 30%;
     height: auto;
     display: block;
-    max-width: 100%;
+    max-width: 40%;
 }
 
 h2 {
