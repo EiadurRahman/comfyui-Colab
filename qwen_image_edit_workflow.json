@@ -413,7 +413,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        624404323908647,
+        396843340415183,
         "randomize",
         4,
         1,
@@ -460,47 +460,6 @@
       "widgets_values": []
     },
     {
-      "id": 197,
-      "type": "LoadImage",
-      "pos": [
-        -1392.322342709787,
-        470.9645207446154
-      ],
-      "size": [
-        400.063195609134,
-        444.3992879182972
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            356,
-            369,
-            383
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.50",
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "wanda.png",
-        "image"
-      ]
-    },
-    {
       "id": 218,
       "type": "ImageScaleToTotalPixels",
       "pos": [
@@ -540,6 +499,82 @@
         1,
         1
       ]
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        244.08951665695818,
+        309.4920564650029
+      ],
+      "size": [
+        190,
+        46
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 52
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 61
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            371,
+            384
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.38",
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 219,
+      "type": "PreviewImage",
+      "pos": [
+        454.5504886270774,
+        668.4084998895615
+      ],
+      "size": [
+        415.9313858329267,
+        480.8076206233045
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 371
+        }
+      ],
+      "outputs": [],
+      "title": "OUTPUT",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.23.0",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
     },
     {
       "id": 212,
@@ -602,54 +637,49 @@
         "Node name for S&R": "TextEncodeQwenImageEditPlus"
       },
       "widgets_values": [
-        "Change the color of the suit to pure black, and add a glowing neon blue outline on the suit"
+        "Change the mans output, to Old money outfit, sky blue shirt, beige wool blazer, simple wireframe glasses, and black pants."
       ]
     },
     {
-      "id": 8,
-      "type": "VAEDecode",
+      "id": 197,
+      "type": "LoadImage",
       "pos": [
-        244.08951665695818,
-        309.4920564650029
+        -1392.322342709787,
+        470.9645207446154
       ],
       "size": [
-        190,
-        46
+        400.063195609134,
+        444.3992879182972
       ],
-      "flags": {
-        "collapsed": false
-      },
-      "order": 14,
+      "flags": {},
+      "order": 5,
       "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 52
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 61
-        }
-      ],
+      "inputs": [],
       "outputs": [
         {
           "name": "IMAGE",
           "type": "IMAGE",
-          "slot_index": 0,
           "links": [
-            371,
-            384
+            356,
+            369,
+            383
           ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
         }
       ],
       "properties": {
         "cnr_id": "comfy-core",
-        "ver": "0.3.38",
-        "Node name for S&R": "VAEDecode"
+        "ver": "0.3.50",
+        "Node name for S&R": "LoadImage"
       },
-      "widgets_values": []
+      "widgets_values": [
+        "src.jpg",
+        "image"
+      ]
     },
     {
       "id": 229,
@@ -684,36 +714,6 @@
         "cnr_id": "comfy-core",
         "ver": "0.24.0",
         "Node name for S&R": "ImageCompare"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 219,
-      "type": "PreviewImage",
-      "pos": [
-        454.5504886270774,
-        668.4084998895615
-      ],
-      "size": [
-        415.9313858329267,
-        480.8076206233045
-      ],
-      "flags": {},
-      "order": 15,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 371
-        }
-      ],
-      "outputs": [],
-      "title": "OUTPUT",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.23.0",
-        "Node name for S&R": "PreviewImage"
       },
       "widgets_values": []
     }
@@ -892,10 +892,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.6597354317156309,
+      "scale": 0.9298353381713427,
       "offset": [
-        576.5391435943002,
-        66.15831365863568
+        37.80077512440835,
+        -174.86424524696668
       ]
     },
     "frontendVersion": "1.45.15",
